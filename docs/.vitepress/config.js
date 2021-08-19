@@ -7,7 +7,7 @@ module.exports = {
       lineNumbers: true
     },
     themeConfig: {
-      repo: 'workspaces/my-SAP-exercises-with-VSCode',
+      repo: 'draschke/my-SAP-exercises-with-VSCode',
       docsDir: 'docs',
  
       editLinks: true,
@@ -26,7 +26,7 @@ module.exports = {
         },
         {
           text: 'Release Notes',
-          link: 'https://github.com/vuejs/vitepress/releases'
+          link: 'https://github.com/draschke/my-SAP-exercises-with-VSCode/releases'
         }
       ],
   

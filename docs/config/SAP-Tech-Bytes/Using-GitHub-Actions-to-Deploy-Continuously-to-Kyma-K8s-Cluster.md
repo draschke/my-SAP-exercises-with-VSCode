@@ -6,7 +6,7 @@ sidebarDepth: 3
 
 - [Using GitHub Actions to Deploy Continuously to Kyma/Kubernetes](https://blogs.sap.com/2021/08/02/sap-tech-bytes-using-github-actions-to-deploy-continuously-to-kyma-kubernetes/?source=social-Global-sap-developers-LINKEDIN_COMPANY-MarketingCampaign-Developers-Business+Technology+Platform+Umbrella-spr-5262938156&campaigncode=CRM-XB21-MKT-DGEALL) with this [VS Dev Container](https://github.com/draschke/dr-sap-tech-bytes-2021-08-02/blob/b108204e237e3c48998ab65a20cc5026afe36b9c/.devcontainer)
 
-- - If you use this [VS Dev Container](https://github.com/draschke/dr-sap-tech-bytes-2021-08-02/blob/b108204e237e3c48998ab65a20cc5026afe36b9c/.devcontainer) you can follow all the steps without having to install any further program. This walkthrough only provides my additional quidance for this awesome tutorial from Marius Obert.
+- If you use this [VS Dev Container](https://github.com/draschke/dr-sap-tech-bytes-2021-08-02/blob/b108204e237e3c48998ab65a20cc5026afe36b9c/.devcontainer) you can follow all the steps without having to install any further program. This walkthrough only provides my additional quidance for this awesome tutorial from Marius Obert.
 
 ## Preparations
 
