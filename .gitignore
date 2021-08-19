@@ -138,3 +138,5 @@ docu/docs/package-lock.json
 docs/package-lock.json
 test.txt
 package-lock.json
+deployment.txt
+test-deployment.txt
