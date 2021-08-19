@@ -1,6 +1,6 @@
 # Basics
 
- To kick off your SAP HANA Application Development Environment for BTP or XSA I recommend to use the mentioned VS Dev Containers in the execises. If you are ready to go for GitHub Codespaces, use this Dev Containers in [Codespaces](https://github.com/features/codespaces).
+ To kick off your SAP HANA Application Development Environment for BTP or XSA I recommend to use the mentioned VS Dev Containers in the execises. If you are ready to go for GitHub Codespaces, use this recommended Dev Containers in [Codespaces](https://github.com/features/codespaces).
 
 - [Prerequisites](https://github.com/draschke/vsc-sap-hana-mta-dev-env-node14x#prerequisites)
 

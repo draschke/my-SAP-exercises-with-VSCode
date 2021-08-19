@@ -7,7 +7,7 @@ module.exports = {
       lineNumbers: true
     },
     themeConfig: {
-      repo: 'vue/my-SAP-exercises',
+      repo: 'workspaces/my-SAP-exercises-with-VSCode',
       docsDir: 'docs',
  
       editLinks: true,
