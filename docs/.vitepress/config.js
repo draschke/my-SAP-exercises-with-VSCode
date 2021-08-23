@@ -57,8 +57,8 @@ function getConfigSidebar() {
       children: [
         {
           text: "Run a CAP Application on Kyma",
-          link: "/config/App-dev-on-SAP-BTP/1/Run-a-CAP-Application-on-Kyma",
-        },
+          link: "/config/App-dev-on-SAP-BTP/Run-a-CAP-Application-on-Kyma"
+        }
         // { text: 'Homepage', link: '/config/homepage' }
       ],
     },
@@ -67,8 +67,18 @@ function getConfigSidebar() {
       children: [
         {
           text: "Using GitHub Actions to Deploy Continuously to Kyma K8s Cluster",
-          link: "/config/SAP-Tech-Bytes/Using-GitHub-Actions-to-Deploy-Continuously-to-Kyma-K8s-Cluster",
-        },
+          link: "/config/SAP-Tech-Bytes/Using-GitHub-Actions-to-Deploy-Continuously-to-Kyma-K8s-Cluster"
+        }
+      ],
+    },
+
+    {
+      text: "Exercises: Blogs-SAP-Com",
+      children: [
+        {
+          text: "Build SAP Overview Page using SAP HANA Cloud with VS Code",
+          link: "/config/Blogs-SAP-Com/Build-SAP-Overview-Page-using-SAP-HANA-Cloud-with-VS-Code"
+        }
       ],
     },
   ];

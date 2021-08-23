@@ -19,7 +19,7 @@ node ➜ /workspaces/sap-tech-bytes (2021-08-02-github-actions-kyma)
 $ docker build -t sap-tech-bytes .
 ```
 
-![cap-kyma-app](../../images/sap-tech-byte/4-build-the-image.png)
+![cap-kyma-app](../images/sap-tech-byte/4-build-the-image.png)
 
 - Tag the image with your registry account user
 
@@ -30,7 +30,7 @@ $ docker tag dr-sap-tech-bytes:latest draschke/dr-sap-tech-bytes
 output--> draschke/dr-sap-tech-bytes:latest
 ```
 
-![cap-kyma-app](../../images/sap-tech-byte/5-tag-image.png)
+![cap-kyma-app](../images/sap-tech-byte/5-tag-image.png)
 
 ## Update your .kube/config
 
@@ -70,7 +70,7 @@ $ kubectl -n tutorial create secret docker-registry regcred --docker-server=http
 
 - After creating the secret "regcred" you'll find it here
 
-![docker registry credentials](../../images/sap-tech-byte/5-regcred.png)
+![docker registry credentials](../images/sap-tech-byte/5-regcred.png)
 
 ## Set up the GitHub Repository
 
@@ -83,7 +83,7 @@ cat kubeconfig.yaml | base64 > base64-kubeconfig.txt
 
 - Create a repo secret ``DEV_KUBECONFIG``  with the base64 value
 
-![cap-kyma-app](../../images/sap-tech-byte/7-secrets.png)
+![cap-kyma-app](../images/sap-tech-byte/7-secrets.png)
 
 ## Create Two GitHub Workflows
 
@@ -115,11 +115,11 @@ password: ${{ secrets.GITHUB_TOKEN }}
 
 - Packages on the right side
 
-![cap-kyma-app](../../images/sap-tech-byte/8-package-created.png)
+![cap-kyma-app](../images/sap-tech-byte/8-package-created.png)
 
 - Check if your app is running (If not keep an eye at your Pods (error logs / credentials))
 
-![cap-kyma-app](../../images/sap-tech-byte/11-Hello-SAP-Tech-Bytes.png)
+![cap-kyma-app](../images/sap-tech-byte/11-Hello-SAP-Tech-Bytes.png)
 
 ## Trigger the Pipeline
 
@@ -153,6 +153,6 @@ After that you should be fine
 
 The [publish.yaml file](https://github.com/draschke/dr-sap-tech-bytes-2021-08-02/blob/85a1177577c438b1e23d7a7b96ab5e34eb3638b7/.github/workflows/publish.yaml) includes a nice Action to keep your releases updated
 
-![cap-kyma-app](../../images/sap-tech-byte/12-release.png)
+![cap-kyma-app](../images/sap-tech-byte/12-release.png)
 
 ## Kudos to Marius Obert for this great technical article
