@@ -1,6 +1,6 @@
 {
   "name": "my-sap-exercises-with-vscode",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "SAP HANA (XSA, CF) Application Development with VS Code (SAPUI5, Fiori, Node.js, OData)",
   "main": "index.js",
   "scripts": {
