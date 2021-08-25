@@ -10,7 +10,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [1.0.7] - 2021-08-25
 
-- Changed Index
+- Changed Index.html
+- Fixed tutorial link
 
 ## [1.0.6] - 2021-08-24
 
