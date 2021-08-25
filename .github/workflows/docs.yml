@@ -10,7 +10,12 @@ on:
 #   push:
 #     branches: [master]
 #   # trigger deployment manually
-#   workflow_dispatch:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Version v1.0.0'
+        required: true
+        default: 'v1.'
 
 jobs:
   docs:
