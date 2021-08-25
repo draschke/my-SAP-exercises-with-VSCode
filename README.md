@@ -4,7 +4,7 @@
 
 I've done a lot of SAP application development exercises in the past. During this time I noticed that it helps me to write down the more difficult steps so that I can repeat them from time to time. Unfortunately, the order of my transcripts was always a mess, which is why I decided to start this [My journey through SAP App Development exercises](https://draschke.github.io/my-SAP-exercises-with-VSCode/config/basics.html) in hope I can fix this downside up with this.  
 
-For a faster and better traceability of the exercises I decided to use the [Visual Studio Dev Container](https://github.com/draschke/vsc-sap-hana-mta-dev-env-node14x#microsoft---vs-code-dev-container) which gives me the possibility to start more quickly the same exercises with the required dev environment. 
+For a faster and better traceability of the exercises I decided to use the [Visual Studio Dev Container](https://github.com/draschke/vsc-sap-hana-mta-dev-env-node14x#microsoft---vs-code-dev-container) which gives me the possibility to start more quickly the same exercises with the required dev environment.
 
 ## Documentation
 
