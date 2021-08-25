@@ -23,8 +23,9 @@ For a faster and better traceability of the exercises I decided to use the [Visu
 
 Have a question or feedback?
 
-- Contribute or provide feedback for this repo (use also [Discussions](https://github.com/draschke/my-SAP-exercises-with-VSCode/discussions)).
-- Search existing issues or report a problem.
+- Contribute or provide feedback for this repo
+- Consider to use [Discussions](https://github.com/draschke/my-SAP-exercises-with-VSCode/discussions)
+- Search existing issues or report a problem
 
 ## License
 
