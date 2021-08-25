@@ -8,4 +8,4 @@
 
 - [Dev Container includes](https://github.com/draschke/vsc-sap-hana-mta-dev-env-node14x#this-vs-dev-container-includes)
 
-- [Tutorials](https://github.com/draschke/vsc-sap-hana-mta-dev-env-node14x#tutorials)
+- [Tutorials](https://github.com/draschke/vsc-sap-hana-mta-dev-env-node14x#my-tutorials-with-vs-code)
