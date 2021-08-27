@@ -40,6 +40,10 @@ head:
       content: "https://draschke.github.io/my-SAP-exercises-with-VSCode/path_1200_627.jpg"
   - - meta
     - prefix: "og: http://ogp.me/ns#"
+      name: "image"
+      content: "https://draschke.github.io/my-SAP-exercises-with-VSCode/path_1200_627.jpg"      
+  - - meta
+    - prefix: "og: http://ogp.me/ns#"
       name: "og:image:width"
       content: "1200"
   - - meta
@@ -48,10 +52,16 @@ head:
       content: "627"
   - - meta
     - name: "twitter:card"
-      content: "https://draschke.github.io/my-SAP-exercises-with-VSCode/path_1200_627.jpg"
+      content: "summary_large_image"
   - - meta
-    - name: "twitter:description"
+    - name: "twitter:title"
       content: "SAP HANA (XSA, CF) Application Development with VS Code (SAPUI5, Fiori, Node.js, OData)"
+- - meta
+    - name: "twitter:description"
+      content: "For a faster and better traceability of the exercises I decided to use the [Visual Studio Dev Container](https://github.com/draschke/my-SAP-exercises-with-VSCode#microsoft---vs-code-dev-container) which gives me the possibility to start more quickly the same exercises with the required dev environment."
+  - - meta
+    - name: "twitter:creator"
+      content: "Dirk Raschke"       
   - - meta
     - name: "twitter:image"
       content: "https://draschke.github.io/my-SAP-exercises-with-VSCode/path_1200_627.jpg"        
