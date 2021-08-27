@@ -1,9 +1,60 @@
+let ogprefix = "og: http://ogp.me/ns#";
+let title = "SAP App Development exercises with VS Code Dev Container";
+let description = "For a faster and better traceability of the exercises I decided to use the [Visual Studio Dev Container](https://github.com/draschke/my-SAP-exercises-with-VSCode#microsoft---vs-code-dev-container) which gives me the possibility to start more quickly the same exercises with the required dev environment.";
+let color = "#f42525";
+let author = "Dirk Raschke";
+let email = "draschke@googlemail.com";
+
 module.exports = {
   lang: "en-US",
+  // <meta property="og:title" content="My journey through SAP App Development exercises">
   title: "My journey through SAP App Development exercises",
   description:
     "My exercises with SAP HANA, SAP HANA XSA, Cloud Foundry, Kyma and other nice things",
   base: "/my-SAP-exercises-with-VSCode/",
+  head: [
+    // ["link", { rel: "icon", href: `/assets/favicon.ico` }],
+    // ["meta", { name: "theme-color", content: color }],
+    ["meta", { prefix: ogprefix, property: "og:title", content: title }],
+    ["meta", { prefix: ogprefix, property: "og:type", content: "article" }],
+    ["meta", { prefix: ogprefix, property: "og:url", content: "https://draschke.github.io/my-SAP-exercises-with-VSCode/" }],
+    ["meta", { prefix: ogprefix, property: "og:description", content: description }],
+    ["meta", { prefix: ogprefix, property: "og:article:author", content: author }],
+    ["meta", { prefix: ogprefix, property: "og:site_name", content: title }],
+    ["meta", { prefix: ogprefix, property: "og:locale", content: "en_US" }],
+    ["meta", { prefix: ogprefix, property: "og:locale:alternate", content: "en_GB" }],
+    // means there are 3 images on this page, the first image is 300x300, the middle one has unspecified dimensions, and the last one is 1000px tall.
+    // 1 1200X627
+    ["meta", { prefix: ogprefix, property: "og:image", content: "https://draschke.github.io/my-SAP-exercises-with-VSCode/path_1200_627.jpg" }],    
+    ["meta", { prefix: ogprefix, property: "og:image:width", content: "1200" }],
+    ["meta", { prefix: ogprefix, property: "og:image:height", content: "627" }],    
+    // 2 600x314
+    ["meta", { prefix: ogprefix, property: "og:image", content: "https://draschke.github.io/my-SAP-exercises-with-VSCode/path_600_314.jpg" }],
+    ["meta", { prefix: ogprefix, property: "og:image:width", content: "600" }],
+    ["meta", { prefix: ogprefix, property: "og:image:height", content: "314" }],  
+    // 3 unspecified
+    ["meta", { prefix: ogprefix, property: "og:image", content: "https://draschke.github.io/my-SAP-exercises-with-VSCode/path_1200_627.jpg" }],    
+    ["meta", { prefix: ogprefix, property: "og:image:alt", content: title }],
+    ["meta", { name: "twitter:title", content: title }],
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    ["meta", { name: "twitter:description", content: description }],
+    ["meta", { name: "twitter:creator", content: author }],
+    ["meta", { name: "twitter:site", content: email }],
+    ["meta", { name: "twitter:image:alt", content: title }],
+    ["meta", { name: "twitter:image", content: "https://draschke.github.io/my-SAP-exercises-with-VSCode/path_1200_627.jpg" }],
+    ["meta", { name: "description", content: description }],
+    ["meta", { name: "keywords", content: "SAP HANA XSA exercises, SAP HANA XSA tutorial, SAP HANA XSA Application Architect, SAP HANA BTP, SAPUI5, SAP Fiori, DevOps, Docker, Kubernetes, K8s, Kyma, JavaScript, Node.js" }],
+    ["meta", { name: "author", content: author }],
+    // name: "image" => heroImage: /path_600_314.jpg
+    // ["meta", { name: "image", content: "https://draschke.github.io/my-SAP-exercises-with-VSCode/path_1200_627.jpg" }],
+    ["meta", { name: "google-site-verification", content: "fIcc0ZHuxODrjX67vMWV1Bm0JM-eGz04Fm4Fy6jAez0" }],
+    // ["meta", { name: "", content: "yes" }],
+    // ["meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }],
+    // ["link", { rel: "apple-touch-icon", href: `/assets/apple-touch-icon.png` }],
+    // ["link", { rel: "mask-icon", href: "/assets/safari-pinned-tab.svg", color: color }],
+    // ["meta", { name: "msapplication-TileImage", content: "/assets/mstile-150x150.png" }],
+    // ["meta", { name: "msapplication-TileColor", content: color }],
+],
   markdown: {
     lineNumbers: true,
   },
@@ -16,7 +67,7 @@ module.exports = {
     lastUpdated: "Last Updated",
 
     nav: [
-      // { text: 'Home', link: '/', activeMatch: '^/$|^/guide/' },
+      // { text: "Home", link: "/", activeMatch: "^/$|^/guide/" },
       { text: "Home", link: "/" },
       {
         text: "Exercises",
@@ -30,9 +81,9 @@ module.exports = {
     ],
 
     sidebar: {
-      // '/guide/': getGuideSidebar(),
+      // "/guide/": getGuideSidebar(),
       "/config/": getConfigSidebar(),
-      // '/': getGuideSidebar()
+      // "/": getGuideSidebar()
     },
   },
 };
@@ -59,7 +110,7 @@ function getConfigSidebar() {
           text: "Run a CAP Application on Kyma",
           link: "/config/App-dev-on-SAP-BTP/Run-a-CAP-Application-on-Kyma"
         }
-        // { text: 'Homepage', link: '/config/homepage' }
+        // { text: "Homepage", link: "/config/homepage" }
       ],
     },
     {
