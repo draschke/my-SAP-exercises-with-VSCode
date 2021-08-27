@@ -56,7 +56,7 @@ head:
   - - meta
     - name: "twitter:title"
       content: "SAP HANA (XSA, CF) Application Development with VS Code (SAPUI5, Fiori, Node.js, OData)"
-- - meta
+  - - meta
     - name: "twitter:description"
       content: "For a faster and better traceability of the exercises I decided to use the [Visual Studio Dev Container](https://github.com/draschke/my-SAP-exercises-with-VSCode#microsoft---vs-code-dev-container) which gives me the possibility to start more quickly the same exercises with the required dev environment."
   - - meta
