@@ -1,5 +1,15 @@
 ---
 sidebarDepth: 3
+head:
+  - - meta
+    - name: title
+      content: "Using GitHub Actions to Deploy Continuously to Kyma/Kubernetes"
+  - - meta
+    - name: description
+      content: "Using GitHub Actions to build a CI/CD pipeline that deploys to your SAP BTP Kyma cluster"
+  - - meta
+    - name: keywords
+      content: SAP HANA BTP, GitHub Actions, CAP, K8s, Kyma, Kubernetes, VS Code Dev Container
 ---
 
 # Using GitHub Actions to Deploy Continuously to Kyma/Kubernetes

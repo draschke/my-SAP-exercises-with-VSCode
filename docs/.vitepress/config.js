@@ -43,7 +43,7 @@ module.exports = {
     ["meta", { name: "twitter:image:alt", content: title }],
     ["meta", { name: "twitter:image", content: "https://draschke.github.io/my-SAP-exercises-with-VSCode/path_1200_627.jpg" }],
     ["meta", { name: "description", content: description }],
-    ["meta", { name: "keywords", content: "SAP HANA XSA exercises, SAP HANA XSA tutorial, SAP HANA XSA Application Architect, SAP HANA BTP, SAPUI5, SAP Fiori, DevOps, Docker, Kubernetes, K8s, Kyma, JavaScript, Node.js" }],
+    ["meta", { name: "keywords", content: "SAP HANA exercises, SAP HANA XSA tutorial, VS Code Dev Container, SAP HANA XSA Application Architect, SAP HANA BTP, SAPUI5, SAP Fiori, DevOps, Kubernetes, K8s, Kyma, JavaScript, Node.js" }],
     ["meta", { name: "author", content: author }],
     // name: "image" => heroImage: /path_600_314.jpg
     // ["meta", { name: "image", content: "https://draschke.github.io/my-SAP-exercises-with-VSCode/path_1200_627.jpg" }],

@@ -1,10 +1,20 @@
 ---
 sidebarDepth: 3
+head:
+  - - meta
+    - name: title
+      content: "Build SAP Overview Page in Visual VS Code"
+  - - meta
+    - name: description
+      content: "Build SAP Overview Page using SAP HANA Cloud & SAP CAP service annotations with Visual Code Dev Container"
+  - - meta
+    - name: keywords
+      content: SAP Overview Page, SAP HANA BTP, CAP, VS Code Dev Container
 ---
 
 # Build SAP Overview Page using SAP HANA Cloud & SAP CAP service annotations in Visual (VS) Code
 
-- [Build SAP Overview Page in Visual VS Code](https://Blogs-SAP-Com/2021/08/05/build-sap-overview-page-using-sap-hana-cloud-sap-cap-service-annotations-in-visual-vs-code/?source=social-Global-sap-developers-LINKEDIN_COMPANY-MarketingCampaign-Developers-SAPHANA-spr-5320082427&campaigncode=CRM-XB21-MKT-DGEALL) with this [VS Dev Container](https://github.com/draschke/vsc-sap-hana-mta-dev-env-node14x/tree/main/.devcontainer)
+- [Build SAP Overview Page in Visual VS Code](https://blogs.sap.com/2021/08/05/build-sap-overview-page-using-sap-hana-cloud-sap-cap-service-annotations-in-visual-vs-code/) with this [VS Dev Container](https://github.com/draschke/vsc-sap-hana-mta-dev-env-node14x/tree/main/.devcontainer)
 
 - If you use this [VS Dev Container](https://github.com/draschke/vsc-sap-hana-mta-dev-env-node14x/tree/main/.devcontainer) you can follow all the steps ***without having to install any further program***. This walkthrough only provides my additional quidance for this awesome :thumbsup: tutorial from SaiNithesh Gajula.
 

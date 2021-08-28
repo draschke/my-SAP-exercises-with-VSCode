@@ -1,6 +1,17 @@
 ---
 sidebarDepth: 3
+head:
+  - - meta
+    - name: title
+      content: "Run a CAP Application on Kyma"
+  - - meta
+    - name: description
+      content: "In this tutorial, you deploy an application built with CAP to an SAP BTP, Kyma runtime cluster. The CAP application has an OData service, SAP Fiori UI and uses SAP HANA as a database."
+  - - meta
+    - name: keywords
+      content: SAP HANA BTP, CAP, K8s, Kyma, Kubernetes, DevOps, VS Code Dev Container
 ---
+
 # Run a CAP Application on Kyma
 
 - [Run a CAP Application on Kyma](https://sap-samples.github.io/cloud-cap-risk-management/Kyma/) with this [VS Dev Container](https://github.com/draschke/vsc-sap-hana-mta-dev-env-node14x/blob/ef0b07b2c5621b9daead27db90d8c2f1ace6bc2a/.devcontainer)
