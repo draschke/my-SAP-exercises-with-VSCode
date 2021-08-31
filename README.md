@@ -6,6 +6,12 @@ I've done a lot of SAP application development exercises in the past. During thi
 
 For a faster and better traceability of the exercises I decided to use the [Visual Studio Dev Container](https://github.com/draschke/vsc-sap-hana-mta-dev-env-node14x#microsoft---vs-code-dev-container) which gives me the possibility to start more quickly the same exercises with the required dev environment.
 
+## Ready for use are VS Dev Container for each major Node.js version (LTS - long-term support)
+
+- [VS Code Dev Container for SAP HANA App development for Node.js 12x](https://draschke.github.io/vsc-sap-hana-mta-dev-env-node12x/)
+- [VS Code Dev Container for SAP HANA App development for Node.js 14x](https://draschke.github.io/vsc-sap-hana-mta-dev-env-node14x/)
+- [VS Code Dev Container for SAP HANA App development for Node.js 16x](https://draschke.github.io/vsc-sap-hana-mta-dev-env-node16x/)
+
 ## Documentation
 
 To check out docs, visit [SAP App Development with VS Code](https://draschke.github.io/my-SAP-exercises-with-VSCode/).
