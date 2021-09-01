@@ -20,8 +20,6 @@ For a faster and better traceability of the exercises I decided to use the [Visu
 
 ## Contributing and feedback
 
-## Contributing and feedback
-
 Have a question or feedback?
 
 - Contribute or provide feedback for this repo
