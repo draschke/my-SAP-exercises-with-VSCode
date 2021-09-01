@@ -1,6 +1,6 @@
 {
   "name": "my-sap-exercises-with-vscode",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "SAP HANA (XSA, CF) Application Development with VS Code Dev Container",
   "main": "index.js",
   "scripts": {
