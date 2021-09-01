@@ -2,8 +2,8 @@
 sidebarDepth: 3
 home: true       
 heroImage: /path_600_314.jpg
-heroAlt: SAP Hana App Development with VS Code
-heroText: SAP App Development with VS Code
+heroAlt: SAP Hana App Development with VS Code Dev Container
+heroText: SAP App Development with VS Code Dev Container
 ---
 
 # Motivation

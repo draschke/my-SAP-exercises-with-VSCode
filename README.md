@@ -1,4 +1,4 @@
-# SAP App Development with VS Code (XSA, CF, BTP, CAP, Node.js, OData)
+# SAP App Development with VS Code Dev Container (XSA, CF, BTP, CAP, Node.js, OData)
 
 ## Motivation
 
