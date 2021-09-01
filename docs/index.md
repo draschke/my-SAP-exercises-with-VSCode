@@ -12,7 +12,7 @@ I've done a lot of SAP application development exercises in the past. During thi
 
 For a faster and better traceability of the exercises I decided to use the [Visual Studio Dev Container](https://code.visualstudio.com/docs/remote/containers-tutorial) which gives me the possibility to start more quickly the same exercises with the required dev environment.
 
-## Ready for use are VS Dev Container for each major Node.js version (LTS - long-term support)
+## Use one of this major Node.js (LTS) releases
 
 - [VS Code Dev Container for SAP HANA App development for Node.js 12x](https://draschke.github.io/vsc-sap-hana-mta-dev-env-node12x/)
 - [VS Code Dev Container for SAP HANA App development for Node.js 14x](https://draschke.github.io/vsc-sap-hana-mta-dev-env-node14x/)
