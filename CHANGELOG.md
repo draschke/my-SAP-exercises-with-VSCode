@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Nothing yet!
 
+## [1.0.17] - 2021-09-7
+
+- Published an new exercise "Deploy a simple app to XSA platform by running Visual VS Code Dev Container"
+
 ## [1.0.12] - 2021-08-27
 
 - changed the meta tags
@@ -41,7 +45,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Everything!
 
-[Unreleased]: https://github.com/draschke/my-SAP-exercises-with-VSCode/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/draschke/my-SAP-exercises-with-VSCode/compare/v1.0.18...HEAD
+[1.0.17]: https://github.com/draschke/my-SAP-exercises-with-VSCode/compare/v1.0.12...v1.0.17
 [1.0.12]: https://github.com/draschke/my-SAP-exercises-with-VSCode/compare/v1.0.11...v1.0.12
 [1.0.11]: https://github.com/draschke/my-SAP-exercises-with-VSCode/compare/v1.0.10...v1.0.11
 [1.0.10]: https://github.com/draschke/my-SAP-exercises-with-VSCode/compare/v1.0.8...v1.0.10

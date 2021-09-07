@@ -129,7 +129,11 @@ function getConfigSidebar() {
         {
           text: "Build SAP Overview Page using SAP HANA Cloud with VS Code",
           link: "/config/Blogs-SAP-Com/Build-SAP-Overview-Page-using-SAP-HANA-Cloud-with-VS-Code"
-        }
+        },
+          {
+            text: "Deploy a simple Node.js app to XSA platform with VS Code",
+            link: "/config/Blogs-SAP-Com/Deploy-a-simple-Nodejs-app-to-XSA-platform"
+          }          
       ],
     },
   ];
