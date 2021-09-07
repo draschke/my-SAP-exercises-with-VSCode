@@ -14,7 +14,7 @@ head:
 
 # Deploy a simple Node.js app to XSA platform by leverage Visual VS Code Dev Container
 
-I suspect that the SAP WebIDE will not longer supported with new features for on-premise sytems, so we've to set up our own development environment and know how to handle all the development steps locally in our own IDE. In this exercise I will follow the deployment steps for a simple Node.js app, which that are described in this [SAP-Guide - Deploy a Node.js Hello-World Application using the XS CLI](https://help.sap.com/viewer/400066065a1b46cf91df0ab436404ddc/2.0.02/en-US/0919e1cbd20646aead930a5743cfa7e1.html). I love to leverage VS Code and that's why I'm going to show how to do this with the VS Dev Containers.
+I suspect that the SAP WebIDE will no longer supported with new features for on-premise sytems, so we've to set up our own development environment and know how to handle all the development steps locally in our own IDE. In this exercise I will follow the deployment steps for a simple Node.js app, which that are described in this [SAP-Guide - Deploy a Node.js Hello-World Application using the XS CLI](https://help.sap.com/viewer/400066065a1b46cf91df0ab436404ddc/2.0.02/en-US/0919e1cbd20646aead930a5743cfa7e1.html). I love to leverage VS Code and that's why I'm going to show how to do this with the VS Dev Containers.
 
 You can follow all my steps with this [VS Dev Container for Node.js 12x](https://github.com/draschke/tree/main/.devcontainer)
 
