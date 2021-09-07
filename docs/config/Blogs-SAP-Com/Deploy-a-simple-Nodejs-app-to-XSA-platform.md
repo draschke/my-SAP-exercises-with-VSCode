@@ -309,6 +309,6 @@ node node_modules/@sap/approuter/approuter.js
 Application router is listening on port: 5000#
 ```
 
-## Voila, now you can develop locally
+## Voila, now you can develop UI apps locally using VS Code and are not dependent on SAP WebIDE for SAP HANA app development
 
 ![Simple UI](../images/Blogs-SAP-Com/ui.png)
