@@ -14,19 +14,22 @@ head:
 
 # Deploy a simple Node.js app to XSA platform by leverage Visual VS Code Dev Container
 
-I suspect that the SAP WebIDE will no longer supported with new features for on-premise sytems, so we've to set up our own development environment and know how to handle all the development steps locally in our own IDE. In this exercise I will follow the deployment steps for a simple Node.js app, which that are described in this [SAP-Guide - Deploy a Node.js Hello-World Application using the XS CLI](https://help.sap.com/viewer/400066065a1b46cf91df0ab436404ddc/2.0.02/en-US/0919e1cbd20646aead930a5743cfa7e1.html). I love to leverage VS Code and that's why I'm going to show how to do this with the VS Dev Containers.
+I suspect that the SAP WebIDE will no longer supported with new features for on-premise sytems, so we've to set up our own development environment and know how to handle all the development steps locally in our own IDE. In this exercise I will follow the deployment steps for a simple Node.js app, which that are described in this [SAP-Guide - Deploy a Node.js Hello-World Application using the XS CLI](https://help.sap.com/viewer/400066065a1b46cf91df0ab436404ddc/2.0.05/en-US/0919e1cbd20646aead930a5743cfa7e1.html). I love to leverage VS Code and that's why I'm going to show how to do this with the VS Dev Containers.
 
-You can follow all my steps with this [VS Dev Container for Node.js 12x](https://github.com/draschke/tree/main/.devcontainer)
+You can follow all my steps with this [VS Dev Container for Node.js 12x](https://draschke.github.io/vsc-sap-hana-mta-dev-env-node12x/)
 
 ## Preparations
 
-- Use Node.js 12.x for this sample app [VS Dev Container](https://github.com/draschke/vsc-sap-hana-mta-dev-env-node14x/tree/main/.devcontainer) and ***no additional installations*** are necessary!
-- You need the XS Client for XSA deployment
+- Use [VS Dev Container Nodejs12x](https://draschke.github.io/vsc-sap-hana-mta-dev-env-node12x/) and ***no additional installations*** are necessary for this exercise!
+- You need the [XS Client](https://draschke.github.io/vsc-sap-hana-mta-dev-env-node12x/#xs-client-for-sap-hana-xsa-only-required-for-connecting-a-xsa-platform) for XSA deployment.
 - Clone this simple [SAP XSA repo](https://github.com/saphanaacademy/XSA.git) in a directory of your choice
-- We will work with this simple SAP app [myxsaapp2](https://github.com/saphanaacademy/XSA/tree/master/myxsaapp2)
-- Copy the .devcontainer in your directory ***myxsaapp2*** and build the Dev Container as described [here](https://draschke.github.io/)
+- We will develop with this simple SAP app [myxsaapp2](https://github.com/saphanaacademy/XSA/tree/master/myxsaapp2)
 
-## Project development
+## Set up for VS Code Dev Container (as you can see, we are inside of a VS Dev Container)
+
+![Set up for VS Code](../images/Blogs-SAP-Com/initial-node12.png)
+
+## Kick off development
 
 Step 1: Login to your space
 
