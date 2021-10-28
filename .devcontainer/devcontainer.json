@@ -4,20 +4,36 @@
     "dockerfile": "Dockerfile",
     "context": "..",
     // Update 'VARIANT' to pick a Node version: 12, 14, 16
-    "args": { "VARIANT": "16" }
+    "args": {
+      "VARIANT": "16"
+    }
   },
-
   // Set *default* container specific settings.json values on container create.
   "settings": {
-    "workbench.colorTheme": "codeSTACKr Theme"
+    "workbench.colorTheme": "codeSTACKr Theme",
+    // "workbench.colorTheme": "Night Owl",
+    "workbench.iconTheme": "vscode-icons",
+    "files.eol": "\n",
+    "shellformat.flag": "-i=2 -bn -ci -sr",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[sql]": {
+      "editor.defaultFormatter": "mtxr.sqltools"
+    },
+    "[gitignore]": {
+      "editor.defaultFormatter": "codezombiech.gitignore"
+    }
   },
-
   // // Add the IDs of extensions you want installed when the container is created.
   "extensions": [
     "alexcvzz.vscode-sqlite",
     "bengreenier.vscode-node-readme",
-    "christian-kohler.path-intellisense",
     "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
     "codestackr.codestackr-theme",
     "coenraads.bracket-pair-colorizer-2",
     "cschleiden.vscode-github-actions",
@@ -26,18 +42,21 @@
     "donjayamanne.githistory",
     "dotjoshjohnson.xml",
     "eamodio.gitlens",
+    "eamodio.gitlens",
     "eg2.vscode-npm-script",
     "esbenp.prettier-vscode",
     "fivepointseven.node-version",
+    "foxundermoon.shell-format",
     "github.copilot",
+    "github.remotehub",
     "github.vscode-pull-request-github",
-    "eamodio.gitlens",
     "grapecity.gc-excelviewer",
     "gruntfuggly.todo-tree",
+    "hbenl.vscode-mocha-test-adapter",
     "hbenl.vscode-test-explorer",
     "hookyqr.beautify",
     "humao.rest-client",
-    "ipedrazas.kubernetes-snippets",
+    "iljapostnovs.ui5plugin",
     "jakebathman.mysql-syntax",
     "jhodel.blue-phoenix",
     "jvalecillos.gpg",
@@ -48,30 +67,23 @@
     "mhutchie.git-graph",
     "mindaro-dev.file-downloader",
     "mindaro.mindaro",
-    "ms-azuretools.vscode-docker",
     "ms-ceintl.vscode-language-pack-de",
-    "ms-kubernetes-tools.vscode-kubernetes-tools",
     "ms-mssql.mssql",
-    "ms-python.python",
-    "ms-python.vscode-pylance",
-    "ms-toolsai.jupyter",
-    "ms-vscode-remote.remote-containers",
-    "ms-vscode-remote.remote-ssh-edit",
-    "ms-vscode-remote.remote-ssh",
-    "ms-vscode-remote.remote-wsl",
-    "ms-vscode-remote.vscode-remote-extensionpack",
     "ms-vscode.cpptools",
     "ms-vscode.js-debug-nightly",
     "ms-vscode.test-adapter-converter",
+    "ms-vscode.vscode-github-issue-notebooks",
     "msjsdiag.debugger-for-chrome",
     "mtxr.sqltools-driver-sqlite",
     "mtxr.sqltools",
     "mutantdino.resourcemonitor",
     "pflannery.vscode-versionlens",
+    "rangav.vscode-thunder-client",
     "redhat.vscode-commons",
     "redhat.vscode-yaml",
     "sapos.yeoman-ui",
     "saposs.sap-hana-driver-for-sqltools",
+    "saposs.vscode-ui5-language-assistant",
     "saposs.xml-toolkit",
     "sapse.sap-ux-annotation-modeler-extension",
     "sapse.sap-ux-application-modeler-extension",
@@ -81,31 +93,41 @@
     "sapse.vsc-extension-sa",
     "sapse.vscode-cds",
     "sdras.night-owl",
-    "sapos.yeoman-ui",
     "solarliner.linux-themes",
     "theosun.sap-json-schemas",
     "thomascsd.vscode-readme-pattern",
+    "timonwong.shellcheck",
     "visualstudioexptteam.vscodeintellicode",
     "vscode-icons-team.vscode-icons",
     "waderyan.gitblame",
-    // Vue Extensions
-    "yzhang.markdown-all-in-one",
-    "sdras.vue-vscode-snippets",
-    "octref.vetur",
-    "hollowtree.vue-snippets",
-    "jcbuisson.vue",
-    // Testing (new)
-    "ms-vscode.live-server"
-    // "pkief.material-icon-theme"
-    // "ritwickdey.liveserver"
+    "yzhang.markdown-all-in-one"
+    // Activate additional features
+    // ===============================
+    // "ms-vscode-remote.remote-containers",
+    // "ms-vscode-remote.remote-ssh-edit",
+    // "ms-vscode-remote.remote-ssh",
+    // "ms-vscode-remote.remote-wsl",
+    // "ms-vscode-remote.vscode-remote-extensionpack",
+    // "ms-kubernetes-tools.vscode-kubernetes-tools",
+    // "ipedrazas.kubernetes-snippets",    
+    // "ms-azuretools.vscode-docker",
+    // Python
+    // ======
+    // "ms-python.python",
+    // "ms-python.vscode-pylance",
+    // "ms-toolsai.jupyter"
   ],
-
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  "forwardPorts": [3000, 4000, 4004, 5000, 8000, 8080],
-
+  "forwardPorts": [
+    3000,
+    4000,
+    4004,
+    5000,
+    8000,
+    8080
+  ],
   // Use 'postCreateCommand' to run commands after the container is created.
   // "postCreateCommand": "uname -a",
-
   // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "node"
 }
