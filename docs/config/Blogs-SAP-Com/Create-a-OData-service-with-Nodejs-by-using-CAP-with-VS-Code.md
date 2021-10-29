@@ -65,9 +65,9 @@ Step 4: Define your first service --> Step 8: Add persistent database
 Follow alle the steps from 4 to 8 of the [tutorial](https://developers.sap.com/tutorials/cp-apm-nodejs-create-service.html).
 
 After you have finished all the steps from the tutorial, comes the nice interesting part about **SQLite**.
-To make the work and steps with SQLite more easy I took same pictures.
+To make the work and steps with SQLite more easy I took some pictures.
 
-Klick "F1" and search for "SQLite: Open Database" and look for your bookshop.db.
+Click "F1" and search for "SQLite: Open Database" and look for your bookshop.db.
 
 ![Simple UI](../images/Blogs-SAP-Com/2/start-sqlite-db.png)
 
