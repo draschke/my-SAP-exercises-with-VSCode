@@ -3,16 +3,16 @@ sidebarDepth: 3
 head:
   - - meta
     - name: title
-      content: "Create a OData service with Node.js, SQLite, Thunder Client by using CAP with VS Code"
+      content: "Create an OData service with Node.js, SQLite, Thunder Client by using CAP with VS Code"
   - - meta
     - name: description
-      content: "Develop a OData service using Core Data & Services (CDS), Node.js, and SQLite, by using the SAP Cloud Application Programming Model (CAP) and developing on your local environment. Learn, how to work with SQLite and how to use the extension Thunder Client (instead of Postman) within of VS Code."
+      content: "Develop an OData service using Core Data & Services (CDS), Node.js, and SQLite, by using the SAP Cloud Application Programming Model (CAP) and developing on your local environment. Learn, how to work with SQLite and how to use the extension Thunder Client (instead of Postman) within of VS Code."
   - - meta
     - name: keywords
       content: CAP VS Code SQLite, VS Code Thunder, VS Code Thunder Client, CAP VS Code Postman, CAP SAP HANA XSA, XSA, VS Code Dev Container, CAP Node, xs, CAP Node Odata
 ---
 
-# Create a OData service with Node.js, SQLite, Thunder Client by using CAP with VS Code
+# Create an OData service with Node.js, SQLite, Thunder Client by using CAP with VS Code
 
  In this exercise I am following the tutorial from  [developers.sap.com](https://developers.sap.com/tutorials/cp-apm-nodejs-create-service.html). Following this SAP developer tutorial, you will learn more useful things in this blog about the app development with SQLite and Thunder Client (like Postman). I recommend using this [.devcontainer](https://github.com/draschke/my-bookshop/tree/master/.devcontainer) and you won't have to install any additional programs.
  If you have questions for setting up a DevContainer, you can follow all the steps already explained in this documentation [VS Code Dev Container for SAP HANA App development](https://draschke.github.io/vsc-sap-hana-mta-dev-env-node14x/).
