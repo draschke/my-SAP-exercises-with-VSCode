@@ -9,7 +9,7 @@ head:
       content: "Develop a OData service using Core Data & Services (CDS), Node.js, and SQLite, by using the SAP Cloud Application Programming Model (CAP) and developing on your local environment. Learn, how to work with SQLite and how to use the extension Thunder Client (instead of Postman) within of VS Code."
   - - meta
     - name: keywords
-      content: xs push, xs deploy, deploy app to XSA, push app to XSA, SAP HANA XSA, XSA, VS Code Dev Container, hana-cli, xs, xs-client
+      content: CAP VS Code SQLite, VS Code Thunder, VS Code Thunder Client, CAP VS Code Postman, CAP SAP HANA XSA, XSA, VS Code Dev Container, CAP Node, xs, CAP Node Odata
 ---
 
 # Create a OData service with Node.js, SQLite, Thunder Client by using CAP with VS Code
