@@ -107,4 +107,4 @@ Now you can debug and test your app without leaving VS Code.
 
 ![Simple UI](../images/Blogs-SAP-Com/2/run-debugger-and-send-request.png)
 
-## Voilà, now you have learned, how to handle your requests within VS Code with **Thunder Client** and how you can use  **SQLite** instead of HANA DB at the beginning of your development
+### Voilà, now you have learned, how to handle your requests within VS Code with **Thunder Client** and how you can use  **SQLite** instead of HANA DB at the beginning of your development
