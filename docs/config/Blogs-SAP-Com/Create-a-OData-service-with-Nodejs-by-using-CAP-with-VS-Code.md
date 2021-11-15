@@ -3,108 +3,185 @@ sidebarDepth: 3
 head:
   - - meta
     - name: title
-      content: "Create an OData service with Node.js, SQLite, Thunder Client by using CAP with VS Code"
+      content: "Devtoberfest 2021 Frontend Week Coding Challenge with VS Code and DevContainer"
   - - meta
     - name: description
-      content: "Develop an OData service using Core Data & Services (CDS), Node.js, and SQLite, by using the SAP Cloud Application Programming Model (CAP) and developing on your local environment. Learn, how to work with SQLite and how to use the extension Thunder Client (instead of Postman) within of VS Code."
+      content: "This is a tutorial for the Devtoberfest 2021 Coding Challenge of week 6. There was an app with a bad loading performance and we are going to optimize it."
   - - meta
     - name: keywords
-      content: CAP VS Code SQLite, VS Code Thunder, VS Code Thunder Client, CAP VS Code Postman, CAP SAP HANA XSA, XSA, VS Code Dev Container, CAP Node, xs, CAP Node Odata
+      content: UI5 Devtoberfest 2021, VS Code UI5, Devtoberfest 2021, VS Code Dev Container
 ---
 
-# Create an OData service with Node.js, SQLite, Thunder Client by using CAP with VS Code
+# Optimize the Devtoberfest 2021 Coding Challenge - App
 
- In this exercise I am following the tutorial from  [developers.sap.com](https://developers.sap.com/tutorials/cp-apm-nodejs-create-service.html). Following this SAP developer tutorial, you will learn more useful things in this blog about the app development with SQLite and Thunder Client (like Postman). I recommend using this [.devcontainer](https://github.com/draschke/my-bookshop/tree/master/.devcontainer) and you won't have to install any additional programs.
+ In this exercise I will show you, how we can optimize the [Devtoberfest 2021 Coding Challenge - App](https://github.com/SAP-samples/devtoberfest-2021-frontend-coding-challenge). Following this SAP developer tutorial, you will learn more useful hints to optimize a Fiori UI5 app. For this tutorial I recommend using this [.devcontainer](https://github.com/draschke/devtoberfest-2021-frontend-coding-challenge/tree/main/.devcontainer) and you won't have to install any additional programs.
  If you have questions for setting up a DevContainer, you can follow all the steps already explained in this documentation [VS Code Dev Container for SAP HANA App development](https://draschke.github.io/vsc-sap-hana-mta-dev-env-node14x/).
 
 ## Preparations
 
-- Use this [.devcontainer](https://github.com/draschke/my-bookshop/tree/master/.devcontainer) and ***no additional installations*** are necessary for this exercise!
+- Use this [.devcontainer](https://github.com/draschke/devtoberfest-2021-frontend-coding-challenge/tree/main/.devcontainer) and ***no additional installations*** are necessary for this exercise!
 
 ## Kick off development
 
-Follow the instruction from the referenced [tutorial](https://developers.sap.com/tutorials/cp-apm-nodejs-create-service.html).
+Step 1: Set up local development environment
 
-Step 1: Set up local development environment and Step 2: Install Visual Studio Code extension
+Use this [.devcontainer](https://github.com/draschke/devtoberfest-2021-frontend-coding-challenge/tree/main/.devcontainer)
 
-Use the VS Code Dev Container as mentioned above.
-
-Step 3: Start project
+Step 2: npm update and installation
 
 ```bash
-node ➜ /workspaces/my-bookshop (master ✗)
-$ npm i
-```
-
-If you like, check for updates and update the package.json.
-
-```bash
-node ➜ /workspaces/my-bookshop (master ✗)
-$ npm install -g npm-check-updates 
+$ npm install -g npm
+$ npm outdated
+$ npm update
+$ npm install -g npm-check-updates
 $ ncu -u
-output looks like: @sap/cds  ^5.5.4  →  ^5.5.5
+--> output
+ @ui5/cli                   ^2.11.2  →  ^2.14.0     
+ karma                       ^6.3.4  →   ^6.3.8     
+ prettier                    ^2.3.2  →   ^2.4.1     
+ ui5-middleware-livereload   ^0.5.4  →   ^0.5.8  
+
+npm i
 ```
 
-Install your npms again, if necessary.
+Step 3: Use the latest UI5 version (ui5.yaml)
 
 ```bash
-node ➜ /workspaces/my-bookshop (master ✗)
-$ npm i
-$ npm audit fix
+$ ui5 use sapui5@latest
+--> output
+Updated configuration written to ui5.yaml
+This project is now using SAPUI5 version 1.96.0
 ```
 
-Start watching you changes.
+Step 4: Check for UI5 npm versions
 
 ```bash
-node ➜ /workspaces/my-bookshop (master ✗)
-$ cds watch
+$ ui5 versions
+INFO: Using local @ui5/cli installation
+-->
+@ui5/cli:      2.14.0
+@ui5/builder:  2.11.1
+@ui5/server:   2.4.0
+@ui5/fs:       2.0.6
+@ui5/project:  2.6.0
+@ui5/logger:   2.0.1
 ```
 
-Step 4: Define your first service --> Step 8: Add persistent database
+Now should you local environment up to date.
 
-Follow alle the steps from 4 to 8 of the [tutorial](https://developers.sap.com/tutorials/cp-apm-nodejs-create-service.html).
+Step 6: Performance Checklist
 
-After you have finished all the steps from the tutorial, comes the nice interesting part about **SQLite**.
-To make the work and steps with SQLite more easy I took some pictures.
+There is a great [performance checklist](https://ui5.sap.com/#/topic/9c6400eb7dc145b78e94a81e6e390780) which you can follow at first
 
-Click "F1" and search for "SQLite: Open Database" and look for your bookshop.db.
+A big help for all your investigations is the [Support Assistant](https://ui5.sap.com/#/topic/57ccd7d7103640e3a187ed55e1d2c163.html)
 
-![Simple UI](../images/Blogs-SAP-Com/2/start-sqlite-db.png)
+Add the parameter ***?sap-ui-debug=true*** at the end on your index.html file, like this
+App-URL: http://localhost:8080/index.html?sap-ui-debug=true
 
-Then open the "SQLITE EXPLORER" on the side bar.
+Now you can open the tool via the keyboard shortcut ***Ctrl Shift Alt P*** 
+After that you can analyze your App by pressing the ***Analyze*** Button on the top of this window.
 
-![Simple UI](../images/Blogs-SAP-Com/2/sqlite-show-records2.png)
+You will see a lot of issues which should be fixed. Lets do it.
 
-Select the tables.
+Enable Asynchronous Loading in the Bootstrap
 
-![Simple UI](../images/Blogs-SAP-Com/2/sqlite-select-records.png)
+index.html
 
-Execute the Select statement by marking the sql statement and clicking "Run Query"
+```html
+<script 
+id="sap-ui-bootstrap"
+src="/resources/sap-ui-core.js"
+data-sap-ui-theme="sap_belize"
+data-sap-ui-compatVersion="edge"
+data-sap-ui-async="true"
+data-sap-ui-onInit="module:my/app/main"
+data-sap-ui-resourceroots='{"my.app": "./"}'>
+</script>
+```
 
-![Simple UI](../images/Blogs-SAP-Com/2/sqlite-run-selected-statement.png)
+Load SAPUI5 from the Content Delivery Network (CDN)
+Specific Version
+index.html
+```html
+<script id="sap-ui-bootstrap"
+    type="text/javascript"
+    src="https://sapui5.hana.ondemand.com/1.95.0/resources/sap-ui-core.js"
+    data-sap-ui-theme="sap_belize"
+    data-sap-ui-libs="sap.m">
+</script>
+```
 
-Insert records in the tables.
+Default Version
+index.html
+```html
+<script id="sap-ui-bootstrap"
+    type="text/javascript"
+    src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+    data-sap-ui-theme="sap_belize"
+    data-sap-ui-libs="sap.m">
+</script>
+```
 
-![Simple UI](../images/Blogs-SAP-Com/2/sqlite-insert-records.png)
+Ensure that Root View and Routing are Configured to Load Targets Asynchronously
 
-Step 9: Test generic handlers with Thunder Client and not Postman
+```json
+"sap.ui5": {
+	"rootView": {
+        "viewName": "sap.ui.demo.walkthrough.view.App",
+        "type": "XML",
+        "id": "app",
+         "async": true !
+    },
+    "routing": {
+        "config": {
+            "routerClass": "sap.m.routing.Router",
+            "viewType": "XML",
+            "viewPath": "sap.ui.demo.walkthrough.view",
+            "controlId": "app",
+            "controlAggregation": "pages",
+            "async": true !
+        }
+    },
+...
+```
 
-Now comes the next useful part. We don't have to leave VS Code. Instead of Postman we'll use the already installed **Thunder Client** extension. (if you use the recommended .devcontainer)
+Ensure that all Resources are Properly Configured to Avoid 404 Errors
 
-Open **Thunder Client** by clicking the "F1" button and search for "View: Show Thunder Client" or use the lightning icon on the side (Activity Bar).
+manifest.json
+```json
+"sap.app": {
+	"i18n": {
+		"bundleUrl": "i18n/i18n.properties",
+		"supportedLocales": ["en", "de"],
+		"fallbackLocale": "en"
+	}
+}
+...
+```
 
-![Simple UI](../images/Blogs-SAP-Com/2/open-thunder-client-import.png)
+Use manifest.json Instead of the Bootstrap to Define Dependencies
 
-Import your [postman.json](https://raw.githubusercontent.com/SAPDocuments/Tutorials/master/tutorials/cp-apm-nodejs-create-service/postman.json) file here:
+```json
+"sap.ui5": {
+	"dependencies": {
+		"minUI5Version": "1.96.0",
+		"libs": {
+			"sap.ui.core": {},
+			"sap.m": {},
+			"sap.ui.layout": {
+				"lazy": true
+			}
+		}
+```
 
-![Simple UI](../images/Blogs-SAP-Com/2/thunder-client-import.png)
+Ensure that Library Preloads are Enabled
 
-Execute the requests
+...
+Step 5: Now change the specific files
 
-![Simple UI](../images/Blogs-SAP-Com/2/thunder-client-request.png)
+- Optimize Media Files 
+Change the size from webapp/resources/img/github.png
 
-Now you can debug and test your app without leaving VS Code.
 
-![Simple UI](../images/Blogs-SAP-Com/2/run-debugger-and-send-request.png)
 
-### Voilà, now you have learned, how to handle your requests within VS Code with **Thunder Client** and how you can use  **SQLite** instead of HANA DB at the beginning of your development
+
