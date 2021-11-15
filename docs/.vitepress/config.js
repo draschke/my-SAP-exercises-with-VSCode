@@ -208,11 +208,9 @@ function getConfigSidebar() {
     {
       text: "Exercises: App dev on SAP BTP",
       children: [{
-          text: "Run a CAP Application on Kyma",
-          link: "/config/App-dev-on-SAP-BTP/Run-a-CAP-Application-on-Kyma"
-        }
-        // { text: "Homepage", link: "/config/homepage" }
-      ],
+        text: "Run a CAP Application on Kyma",
+        link: "/config/App-dev-on-SAP-BTP/Run-a-CAP-Application-on-Kyma"
+      }],
     },
     {
       text: "Exercises: SAP-Tech-Bytes",
@@ -238,8 +236,13 @@ function getConfigSidebar() {
         {
           text: "Create a OData service with Nodejs by using CAP with VS Code",
           link: "/config/Blogs-SAP-Com/Create-a-OData-service-with-Nodejs-by-using-CAP-with-VS-Code"
+        }, {
+          text: "Add a piechart into the openui5 sample app",
+          link: "/config/Blogs-SAP-Com/Add-a-piechart-into-the-openui5-sample-app"
+        }, {
+          text: "Devtoberfest 2021 Frontend Week Coding Challenge",
+          link: "/config/Blogs-SAP-Com/Devtoberfest-2021-Frontend-Week-Coding-Challenge"
         }
-
         // ,
         // {
         //   text: "Develop the repositiory BMP on your local System with VS Code to a SAP HANA XSA",

@@ -8,6 +8,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Nothing yet!
 
+## [1.1.0] - 2021-11-15
+
+- Published exercise "Devtoberfest 2021 Frontend Week Coding Challenge with VS Code and DevContainer"
+- Published exercise "Challenge: Add a PieChart into the OpenUI5 Sample App"
+
 ## [1.0.21] - 2021-10-29
 
 - Published a new exercise "Create a OData service with Node.js, SQLite, Thunder Client by using CAP with VS Code"
@@ -49,7 +54,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Everything!
 
-[Unreleased]: https://github.com/draschke/my-SAP-exercises-with-VSCode/compare/v1.0.21...HEAD
+[Unreleased]: https://github.com/draschke/my-SAP-exercises-with-VSCode/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/draschke/my-SAP-exercises-with-VSCode/compare/v1.0.21...v1.1.0
 [1.0.21]: https://github.com/draschke/my-SAP-exercises-with-VSCode/compare/v1.0.17...v1.0.21
 [1.0.17]: https://github.com/draschke/my-SAP-exercises-with-VSCode/compare/v1.0.12...v1.0.17
 [1.0.12]: https://github.com/draschke/my-SAP-exercises-with-VSCode/compare/v1.0.11...v1.0.12

@@ -14,7 +14,7 @@ head:
 
 # Optimize the Devtoberfest 2021 Coding Challenge - App
 
- In this exercise I will show you, how we can optimize the [Devtoberfest 2021 Coding Challenge - App](https://github.com/SAP-samples/devtoberfest-2021-frontend-coding-challenge). Following this SAP developer tutorial, you will learn more useful hints to optimize a Fiori UI5 app. For this tutorial I recommend using this [.devcontainer](https://github.com/draschke/devtoberfest-2021-frontend-coding-challenge/tree/main/.devcontainer) and you won't have to install any additional programs.
+ In this exercise, I will show you, how we can optimize the [Devtoberfest 2021 Coding Challenge - App](https://github.com/SAP-samples/devtoberfest-2021-frontend-coding-challenge). Following this SAP developer tutorial, you will learn more useful hints to optimize a Fiori UI5 app. For this tutorial I recommend using this [.devcontainer](https://github.com/draschke/devtoberfest-2021-frontend-coding-challenge/tree/main/.devcontainer) and you won't have to install any additional programs.
  If you have questions for setting up a DevContainer, you can follow all the steps already explained in this documentation [VS Code Dev Container for SAP HANA App development](https://draschke.github.io/vsc-sap-hana-mta-dev-env-node14x/).
 
 ## Preparations
@@ -67,7 +67,7 @@ INFO: Using local @ui5/cli installation
 @ui5/logger:   2.0.1
 ```
 
-Now should you local environment up to date.
+Now your local environment should be up to date.
 
 Step 6: Performance Checklist
 
@@ -75,15 +75,21 @@ There is a great [performance checklist](https://ui5.sap.com/#/topic/9c6400eb7dc
 
 A big help for all your investigations is the [Support Assistant](https://ui5.sap.com/#/topic/57ccd7d7103640e3a187ed55e1d2c163.html)
 
-Add the parameter ***?sap-ui-debug=true*** at the end on your index.html file, like this
+Add the parameter ***?sap-ui-debug=true*** at the end of your index.html file, like this
 App-URL: http://localhost:8080/index.html?sap-ui-debug=true
 
 Now you can open the tool via the keyboard shortcut ***Ctrl Shift Alt P*** 
 After that you can analyze your App by pressing the ***Analyze*** Button on the top of this window.
 
-You will see a lot of issues which should be fixed. Lets do it.
+You will see a lot of issues which should be fixed. Let's do it.
 
-Enable Asynchronous Loading in the Bootstrap
+- At the beginnig you can generate the missing IDs automatically (click the the light bulb)
+
+![generate IDs](../images/Blogs-SAP-Com/generate-id.png)
+
+- Next, you should remove all the unused libs from the view. The included UI5 Language Assistant will show you.
+
+- Enable Asynchronous Loading in the Bootstrap
 
 index.html
 
@@ -99,9 +105,10 @@ data-sap-ui-resourceroots='{"my.app": "./"}'>
 </script>
 ```
 
-Load SAPUI5 from the Content Delivery Network (CDN)
-Specific Version
-index.html
+- Load SAPUI5 from the Content Delivery Network (CDN)
+
+Specific Version index.html
+
 ```html
 <script id="sap-ui-bootstrap"
     type="text/javascript"
@@ -111,8 +118,8 @@ index.html
 </script>
 ```
 
-Default Version
-index.html
+Default Version index.html
+
 ```html
 <script id="sap-ui-bootstrap"
     type="text/javascript"
@@ -122,7 +129,7 @@ index.html
 </script>
 ```
 
-Ensure that Root View and Routing are Configured to Load Targets Asynchronously
+- Ensure that Root View and Routing are Configured to Load Targets Asynchronously
 
 ```json
 "sap.ui5": {
@@ -142,10 +149,9 @@ Ensure that Root View and Routing are Configured to Load Targets Asynchronously
             "async": true !
         }
     },
-...
 ```
 
-Ensure that all Resources are Properly Configured to Avoid 404 Errors
+- Ensure that all Resources are Properly Configured to Avoid 404 Errors
 
 manifest.json
 ```json
@@ -156,10 +162,9 @@ manifest.json
 		"fallbackLocale": "en"
 	}
 }
-...
 ```
 
-Use manifest.json Instead of the Bootstrap to Define Dependencies
+- Use manifest.json Instead of the Bootstrap to Define Dependencies
 
 ```json
 "sap.ui5": {
@@ -172,16 +177,11 @@ Use manifest.json Instead of the Bootstrap to Define Dependencies
 				"lazy": true
 			}
 		}
+  }
+}
 ```
 
-Ensure that Library Preloads are Enabled
+- At the end, you should change the size from github.png and make it smaller.
 
-...
-Step 5: Now change the specific files
-
-- Optimize Media Files 
-Change the size from webapp/resources/img/github.png
-
-
-
-
+But I think the most interesting part of this great challenge is the gh action [Lighthouse Check Action](https://github.com/foo-software/lighthouse-check-action).
+You really should keep an eye on it. That's really impressive and could be useful for your CI/CD pipeline.
