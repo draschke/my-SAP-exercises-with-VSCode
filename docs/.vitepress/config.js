@@ -208,14 +208,14 @@ function getConfigSidebar() {
     {
       text: "Exercises: App dev on SAP BTP",
       children: [{
-        text: "Run a CAP Application on Kyma",
+        text: "Run a CAP Application on Kyma, 19.08.2021",
         link: "/config/App-dev-on-SAP-BTP/Run-a-CAP-Application-on-Kyma"
       }],
     },
     {
       text: "Exercises: SAP-Tech-Bytes",
       children: [{
-        text: "Using GitHub Actions to Deploy Continuously to Kyma K8s Cluster",
+        text: "Using GitHub Actions to Deploy Continuously to Kyma K8s Cluster, 8.09.2021",
         link: "/config/SAP-Tech-Bytes/Using-GitHub-Actions-to-Deploy-Continuously-to-Kyma-K8s-Cluster"
       }],
     },
@@ -226,21 +226,21 @@ function getConfigSidebar() {
       children: [
 
         {
-          text: "Build SAP Overview Page using SAP HANA Cloud with VS Code",
+          text: "Build SAP Overview Page using SAP HANA Cloud with VS Code, 25.08.2021",
           link: "/config/Blogs-SAP-Com/Build-SAP-Overview-Page-using-SAP-HANA-Cloud-with-VS-Code"
         },
         {
-          text: "Deploy a simple Node.js app to XSA platform with VS Code",
+          text: "Deploy a simple Node.js app to XSA platform with VS Code, 7.09.2021",
           link: "/config/Blogs-SAP-Com/Deploy-a-simple-Nodejs-app-to-XSA-platform"
         },
         {
-          text: "Create a OData service with Nodejs by using CAP with VS Code",
+          text: "Create a OData service with Nodejs by using CAP with VS Code, 29.10.2021",
           link: "/config/Blogs-SAP-Com/Create-a-OData-service-with-Nodejs-by-using-CAP-with-VS-Code"
         }, {
-          text: "Add a piechart into the openui5 sample app",
+          text: "Add a piechart into the openui5 sample app, 15.11.2021",
           link: "/config/Blogs-SAP-Com/Add-a-piechart-into-the-openui5-sample-app"
         }, {
-          text: "Devtoberfest 2021 Frontend Week Coding Challenge",
+          text: "Devtoberfest 2021 Frontend Week Coding Challenge, 15.11.2021",
           link: "/config/Blogs-SAP-Com/Devtoberfest-2021-Frontend-Week-Coding-Challenge"
         }
         // ,
