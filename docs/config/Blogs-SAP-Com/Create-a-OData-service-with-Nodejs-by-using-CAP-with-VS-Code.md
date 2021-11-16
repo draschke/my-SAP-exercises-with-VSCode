@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 3
+sidebarDepth: 4
 head:
   - - meta
     - name: title
@@ -25,11 +25,13 @@ head:
 
 Follow the instruction from the referenced [tutorial](https://developers.sap.com/tutorials/cp-apm-nodejs-create-service.html).
 
-Step 1: Set up local development environment and Step 2: Install Visual Studio Code extension
+### Step 1: Set up local development environment
+
+### Step 2: Install Visual Studio Code Dev Container
 
 Use the VS Code Dev Container as mentioned above.
 
-Step 3: Start project
+### Step 3: Start project
 
 ```bash
 node ➜ /workspaces/my-bookshop (master ✗)
@@ -60,7 +62,7 @@ node ➜ /workspaces/my-bookshop (master ✗)
 $ cds watch
 ```
 
-Step 4: Define your first service --> Step 8: Add persistent database
+### Step 4: Define your first service --> Step 8: Add persistent database
 
 Follow alle the steps from 4 to 8 of the [tutorial](https://developers.sap.com/tutorials/cp-apm-nodejs-create-service.html).
 
@@ -87,7 +89,7 @@ Insert records in the tables.
 
 ![Simple UI](../images/Blogs-SAP-Com/2/sqlite-insert-records.png)
 
-Step 9: Test generic handlers with Thunder Client and not Postman
+### Step 9: Test generic handlers with Thunder Client and not Postman
 
 Now comes the next useful part. We don't have to leave VS Code. Instead of Postman we'll use the already installed **Thunder Client** extension. (if you use the recommended .devcontainer)
 

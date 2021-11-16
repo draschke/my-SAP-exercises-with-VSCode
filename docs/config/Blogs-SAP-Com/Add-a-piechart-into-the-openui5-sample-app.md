@@ -1,9 +1,9 @@
 ---
-sidebarDepth: 3
+sidebarDepth: 4
 head:
   - - meta
     - name: title
-      content: "Challenge: Add a PieChart into the OpenUI5 Sample App"
+      content: "Challenge: Add a Custom Control PieChart into the OpenUI5 Sample App"
   - - meta
     - name: description
       content: "Challenge: Add a PieChart into the OpenUI5 Sample App by using Visual VS Code Dev Container, which already contains all of the required programs. In the end you'll see a PieChart included by a Custom Control in your Sample App"
@@ -12,7 +12,7 @@ head:
       content: PieChart OpenUI5 Sample App, PieChart OpenUI5 App, VS Code Dev Container
 ---
 
-# Add a PieChart into the OpenUI5 Sample App
+# Add a Custom Control PieChart into the OpenUI5 Sample App
 
 - Use this [.devcontainer](https://github.com/draschke/add-a-piechart-into-the-openui5-sample-app/tree/main/.devcontainer) and ***no additional installations*** are necessary for this exercise!
 
@@ -20,7 +20,7 @@ head:
 
 Follow the instructions from the great [technical article](https://blogs.sap.com/2021/11/15/using-npm-packages-in-ui5-without-shims/?source=email-global-notification-bp-new-in-tag-followed) written by Peter Muessig
 
-Step 1: Prepare your environment
+### Step 1: Prepare your environment
 
 ```bash
 git clone https://github.com/SAP/openui5-sample-app.git
@@ -42,7 +42,7 @@ $ ncu -u
 ui5 serve -o index.html
 ```
 
-Step 2: Configure the ui5-tooling-modules extensions and add the livereload middleware
+### Step 2: Configure the ui5-tooling-modules extensions and add the livereload middleware
 
 ```bash
 npm install ui5-tooling-modules --save-dev
@@ -70,7 +70,7 @@ server:
 
 ```
 
-Step 3: Add Chart.js to the project
+### Step 3: Add Chart.js to the project
 
 ```bash
 node ➜ /workspaces/openui5-sample-app (master ✗)
@@ -103,9 +103,15 @@ Create a custom control for the PieChart integration into UI5:
 </mvc:View>
 ```
 
-Voilá, now you will see the PieChart!
+### Voilá, now you will see the PieChart
 
-Bonus Step 5: Building your project
+![after-running-cds-watch](../images/Blogs-SAP-Com/piechart.png)
+
+### Step 4: Connecting the dots
+
+Follow the article
+
+### Step 5: Building your project
 
 After the build completed, inspect the “dist” folder and you can find a file called “chart.js.js”:
 
@@ -124,4 +130,3 @@ openui5-sample-app
 └── ui5.yaml
 ```
 
-![after-running-cds-watch](../images/Blogs-SAP-Com/piechart.png)

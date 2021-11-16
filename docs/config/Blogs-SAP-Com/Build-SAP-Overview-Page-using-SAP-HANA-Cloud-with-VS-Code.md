@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 3
+sidebarDepth: 4
 head:
   - - meta
     - name: title
@@ -24,14 +24,14 @@ head:
 
 ## Project development
 
-Step 3 : Select CAP Project and click on Next until Step 6
+### Step 3 : Select CAP Project and click on Next until Step 6
 
 ```bash
 node ➜ /dr-cf-build-sap-overview-page/
 $ npm install
 ```
 
-Step 7: hana-cli createModule
+### Step 7: hana-cli createModule
 
 ```bash
 node ➜ /dr-cf-build-sap-overview-page/
@@ -42,18 +42,18 @@ After executing the command it looks like this
 
 ![after-running-createModule](../images/Blogs-SAP-Com/Build-SAP-Overview-Page-using-SAP-HANA-Cloud-with-VS-Code/2-createModule.png)
 
-Step 8: Create the data model cds ***schema.cds*** under db layer.
+### Step 8: Create the data model cds ***schema.cds*** under db layer.
 
 ```bash
 node ➜ /dr-cf-build-sap-overview-page/db
 $ create file schema.cds
 ```
 
-Step 9: Create a CDS service ***capfesrv.cds*** in srv.
+### Step 9: Create a CDS service ***capfesrv.cds*** in srv.
 
-Step 10: Now create annotation file under srv layer named as ***ovpcapfeannotation.cds***.
+### Step 10: Now create annotation file under srv layer named as ***ovpcapfeannotation.cds***.
 
-Step 11: Using ***cds watch*** we can run the server and can the observe the logs in the terminal according to the development.
+### Step 11: Using ***cds watch*** we can run the server and can the observe the logs in the terminal according to the development.
 
 ```bash
 node ➜ /dr-cf-build-sap-overview-page/db
@@ -62,13 +62,13 @@ $ cds watch
 
 ![after-running-cds-watch](../images/Blogs-SAP-Com/Build-SAP-Overview-Page-using-SAP-HANA-Cloud-with-VS-Code/3-cds-watch.png)
 
-Step 12: Let’s us check the metadata based on the service and annotations
+### Step 12: Let’s us check the metadata based on the service and annotations
 
 ```html
 http://localhost:4005/service/cap/$metadata
 ```
 
-Step 13: Add csv files under ***db/csv*** naming as namespace-entity.csv  
+### Step 13: Add csv files under ***db/csv*** naming as namespace-entity.csv  
 
 ![after-running-cds-watch](../images/Blogs-SAP-Com/Build-SAP-Overview-Page-using-SAP-HANA-Cloud-with-VS-Code/13-add-csv.png)
 
@@ -76,7 +76,7 @@ Step 13: Add csv files under ***db/csv*** naming as namespace-entity.csv
 http://localhost:4005/service/cap/SalesHistory?$top=11
 ```
 
-Step 14: Update the ***package.json*** with hana configurations & devDependencies.
+### Step 14: Update the ***package.json*** with hana configurations & devDependencies.
 
 Install v2-proxy-adapter
 
@@ -92,7 +92,7 @@ package.json
 "deploy-format": "sql" --> "deploy-format": "hdbtable"
 ```
 
-Step 15: To create V2 will ***add server.js*** odata v2 proxy using npm i @sap/cds-odata-v2-adapter-proxy
+### Step 15: To create V2 will ***add server.js*** odata v2 proxy using npm i @sap/cds-odata-v2-adapter-proxy
 
 Add server.js
 
@@ -107,7 +107,7 @@ cds.on("bootstrap", app => app.use(proxy()));
 module.exports = cds.server;
 ```
 
-Step 16: Add ***node version*** in the package.json.
+### Step 16: Add ***node version*** in the package.json.
 
 ```js
     "engines": {
@@ -115,14 +115,14 @@ Step 16: Add ***node version*** in the package.json.
     },
 ```
 
-Step 17: Now generate and ***mta*** file using cds add mta.
+### Step 17: Now generate and ***mta*** file using cds add mta.
 
 ```bash
 node ➜ /dr-cf-build-sap-overview-page/ 
 $ cds add mta
 ```
 
-Step 18: Execute ***cds build***
+### Step 18: Execute ***cds build***
 
 ```bash
 node ➜ /dr-cf-build-sap-overview-page/ 
@@ -135,13 +135,13 @@ $ cds build
 http://localhost:4005/service/cap/SalesHistory?$top=11
 ```
 
-Step 19: Now let us ***login*** to SAP Cloud Foundry.
+### Step 19: Now let us ***login*** to SAP Cloud Foundry.
 
 ```bash
 cf login -a https://api.cf.eu10.hana.ondemand.com -u email@ -p xxx --skip-ssl-validation
 ```
 
-Step 20: ***Build the mtar*** file using mbt build -t ./
+### Step 20: ***Build the mtar*** file using mbt build -t ./
 
 ```bash
 mbt build -t ./
@@ -153,7 +153,7 @@ Check for your SAP HANA DB ***it's up and running***! In my case the HANA DB was
 
 ![hana-db](../images/Blogs-SAP-Com/Build-SAP-Overview-Page-using-SAP-HANA-Cloud-with-VS-Code/9-start-hana-db.png)
 
-Step 21: ***Deploy*** the app to BTP
+### Step 21: ***Deploy*** the app to BTP
 
 ```bash
 cf deploy dr-cf-build-sap-overview-page_1.0.0.mtar
@@ -162,7 +162,7 @@ cf deploy dr-cf-build-sap-overview-page_1.0.0.mtar
 After Deployment  
 ![after-deployment](../images/Blogs-SAP-Com/Build-SAP-Overview-Page-using-SAP-HANA-Cloud-with-VS-Code/11-after-deployment.png)
 
-Step 22: Now we can see the cap service is available to use both in v4 & v2 version
+### Step 22: Now we can see the cap service is available to use both in v4 & v2 version
 
 Check for the ****different OData versions**** in BTP
 
@@ -181,25 +181,25 @@ https://xxxxx-dev-dr-cf-build-sap-overview-page-srv.cfapps.eu10.hana.ondemand.co
 --> its working, can see the data! :)
 ```
 
-Step 23: Now let us create SAP Fiori Elements. Press F1 and start typing and select >***Fiori: Open Application Generator***. Choose Overview Page and click Next.
+### Step 23: Now let us create SAP Fiori Elements. Press F1 and start typing and select >***Fiori: Open Application Generator***. Choose Overview Page and click Next.
 
-Step 24: Choose Connect to an OData Service under ***Data Source & Service Selection***
+### Step 24: Choose Connect to an OData Service under ***Data Source & Service Selection***
 
-Step 25: Provide the ***oData V2 CAP service*** and click Next.
+### Step 25: Provide the ***oData V2 CAP service*** and click Next.
 
-Step 26: Select the ***SalesOrder*** for Filter entity and click on Next.
+### Step 26: Select the ***SalesOrder*** for Filter entity and click on Next.
 
-Step 27: Now let’s run the application, right click on the project, and choose ***Preview Application***.
+### Step 27: Now let’s run the application, right click on the project, and choose ***Preview Application***.
 
 ```bash
 npm run start
 ```
 
-Step 28: You can see empty screen with filters.
+### Step 28: You can see empty screen with filters.
 
 ![empty-screen](../images/Blogs-SAP-Com/Build-SAP-Overview-Page-using-SAP-HANA-Cloud-with-VS-Code/14-flp-page.png)
 
-Step 29: Lets ***add cards now in manifest.json*** and change ***enableLiveFilter to false***. So that Go action will get enabled.
+### Step 29: Lets ***add cards now in manifest.json*** and change ***enableLiveFilter to false***. So that Go action will get enabled.
 
 web/webapp/manifest.json
 
@@ -207,7 +207,7 @@ web/webapp/manifest.json
 "enableLiveFilter": false,
 ```
 
-Step 30: Reload the app, we can the charts get rendered based on the annotations which we created earlier
+### Step 30: Reload the app, we can the charts get rendered based on the annotations which we created earlier
 
 Added the two cards in manifest.json file
 web/webapp/manifest.json

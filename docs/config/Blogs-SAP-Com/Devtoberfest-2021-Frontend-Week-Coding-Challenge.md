@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 3
+sidebarDepth: 4
 head:
   - - meta
     - name: title
@@ -23,11 +23,11 @@ head:
 
 ## Kick off development
 
-Step 1: Set up local development environment
+### Step 1: Set up local development environment
 
 Use this [.devcontainer](https://github.com/draschke/devtoberfest-2021-frontend-coding-challenge/tree/main/.devcontainer)
 
-Step 2: npm update and installation
+### Step 2: npm update and installation
 
 ```bash
 $ npm install -g npm
@@ -44,7 +44,7 @@ $ ncu -u
 npm i
 ```
 
-Step 3: Use the latest UI5 version (ui5.yaml)
+### Step 3: Use the latest UI5 version (ui5.yaml)
 
 ```bash
 $ ui5 use sapui5@latest
@@ -53,7 +53,7 @@ Updated configuration written to ui5.yaml
 This project is now using SAPUI5 version 1.96.0
 ```
 
-Step 4: Check for UI5 npm versions
+### Step 4: Check for UI5 npm versions
 
 ```bash
 $ ui5 versions
@@ -69,7 +69,7 @@ INFO: Using local @ui5/cli installation
 
 Now your local environment should be up to date.
 
-Step 6: Performance Checklist
+### Step 6: Performance Checklist
 
 There is a great [performance checklist](https://ui5.sap.com/#/topic/9c6400eb7dc145b78e94a81e6e390780) which you can follow at first
 
@@ -78,8 +78,7 @@ A big help for all your investigations is the [Support Assistant](https://ui5.sa
 Add the parameter ***?sap-ui-debug=true*** at the end of your index.html file, like this
 App-URL: http://localhost:8080/index.html?sap-ui-debug=true
 
-Now you can open the tool via the keyboard shortcut ***Ctrl Shift Alt P*** 
-After that you can analyze your App by pressing the ***Analyze*** Button on the top of this window.
+Now you can open the tool via the keyboard shortcut ***Ctrl Shift Alt P***. After that you can analyze your App by pressing the ***Analyze*** Button on the top of this window.
 
 You will see a lot of issues which should be fixed. Let's do it.
 
@@ -152,8 +151,8 @@ Default Version index.html
 ```
 
 - Ensure that all Resources are Properly Configured to Avoid 404 Errors
-
 manifest.json
+
 ```json
 "sap.app": {
 	"i18n": {
@@ -182,6 +181,8 @@ manifest.json
 ```
 
 - At the end, you should change the size from github.png and make it smaller.
+
+### Step 7: Lighthouse Check Action
 
 But I think the most interesting part of this great challenge is the gh action [Lighthouse Check Action](https://github.com/foo-software/lighthouse-check-action).
 You really should keep an eye on it. That's really impressive and could be useful for your CI/CD pipeline.
