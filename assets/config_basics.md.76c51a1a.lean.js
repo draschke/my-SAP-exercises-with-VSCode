@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as r,d as t}from"./app.80f3e7ce.js";const u='{"title":"Basics","description":"","frontmatter":{},"relativePath":"config/basics.md","lastUpdated":1637069977803}',s={},n=t('',3),o=[n];function i(c,p,d,h,l,_){return r(),a("div",null,o)}var m=e(s,[["render",i]]);export{u as __pageData,m as default};
